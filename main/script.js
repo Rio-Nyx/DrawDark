@@ -1,7 +1,7 @@
 	var canvas = document.getElementById('myCanvas');
 	var ctx = canvas.getContext('2d');
-	window.addEventListener("load",()=>{
-		
+
+	window.addEventListener("load",()=>{		
 		createels();
 	});
 	
@@ -45,8 +45,7 @@
 		var onPaint = function() {
 			ctx.lineTo(mouse.x, mouse.y);
 			ctx.stroke();
-		};
-		
+		};	
 	}
 	
 	function openLeftMenu() {
@@ -57,15 +56,13 @@
 	  document.getElementById("leftMenu").style.display = "none";
 	}
 	
-	function fn1(){
+	function erase(){
 		console.log("erase fn");
 		ctx.strokeStyle="black";
 		ctx.lineWidth = 7;
 	}
 	
-	function fn2(){
+	function draw(){
 		ctx.strokeStyle="white";
 		ctx.lineWidth = 3;
 	}
-
-
