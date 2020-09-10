@@ -1,0 +1,13 @@
+*{
+	padding:0px ;
+	margin:0px ;
+}
+
+canvas{
+	border:10px solid red;
+	background-color: black;
+}	
+
+h1{
+	text-align:center;
+}
