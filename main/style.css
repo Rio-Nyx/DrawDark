@@ -11,3 +11,7 @@ canvas{
 h1{
 	text-align:center;
 }
+
+.w3-red, .w3-blue{
+	width: 100%;
+}
