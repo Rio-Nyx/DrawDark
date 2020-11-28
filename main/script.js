@@ -1,11 +1,11 @@
 	var canvas = document.getElementById('myCanvas');
 	var ctx = canvas.getContext('2d');
-
-	window.addEventListener("load",()=>{		
+	window.addEventListener("load",()=>{
+		
 		createels();
 	});
 	
-	window.addEventListener("refresh",()=>{
+	window.addEventListener("resize",()=>{
 		canvas.height = window.innerHeight ;
 		canvas.width = window.innerWidth ;
 	});
@@ -15,7 +15,7 @@
 		canvas.height = window.innerHeight ;
 		canvas.width = window.innerWidth ;
 
-		ctx.lineWidth = 3;
+		ctx.lineWidth = 5;
 		ctx.lineJoin = 'round';
 		ctx.lineCap = 'round';
 		ctx.strokeStyle = 'white';
@@ -45,8 +45,10 @@
 		var onPaint = function() {
 			ctx.lineTo(mouse.x, mouse.y);
 			ctx.stroke();
-		};	
+		};
+		
 	}
+	var mem = "white";
 	
 	function openLeftMenu() {
 	  document.getElementById("leftMenu").style.display = "block";
@@ -58,11 +60,15 @@
 	
 	function erase(){
 		console.log("erase fn");
+		if(ctx.strokeStyle!="black")
+			mem = ctx.strokeStyle;
 		ctx.strokeStyle="black";
-		ctx.lineWidth = 7;
 	}
 	
+	function marker(color){
+		ctx.strokeStyle = color;
+	}
+
 	function draw(){
-		ctx.strokeStyle="white";
-		ctx.lineWidth = 3;
+		ctx.strokeStyle = mem;
 	}
