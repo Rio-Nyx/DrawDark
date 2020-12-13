@@ -1,4 +1,4 @@
-# Paidark
+# DrawDark
 
 Simple dark themed board with white markup.
 
