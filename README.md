@@ -1,6 +1,6 @@
 # DrawDark
 
-Simple dark themed board with white markup.
+Simple dark themed board with markup.
 
 current feature:
     eraser
